@@ -6,41 +6,85 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/vg_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_bg"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="IMC Calculator"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Use this app to calculate your IMC and find out if you need to work out"
+            android:textStyle="italic"></TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:src="@drawable/gradient_bg"></ImageView>
+
+    </LinearLayout>
+
+
+
 
     <Button
         android:id="@+id/imcButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="Result"
+        android:text="Calculate"
+        android:backgroundTint="@color/primary_400"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/heightInput"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="48dp"
         android:layout_margin="16dp"
+        android:background="@drawable/rounded_textinput"
+        android:drawableEnd="@drawable/height_24dp_e8eaed_fill0_wght100_grad_25_opsz24"
         android:hint="Enter your height ex. 1.75 m"
         android:inputType="numberDecimal"
-        android:id="@+id/heightInput"
+        android:maxLength="4"
         android:textAlignment="center"
-        android:background="@drawable/rounded_textinput"
         app:layout_constraintBottom_toTopOf="@+id/imcButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.263" />
+        app:layout_constraintVertical_bias="0.446" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_margin="16dp"
-        android:textAlignment="center"
         android:id="@+id/weightInput"
-        android:hint="Enter your weight ex. 75.2kg"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
         android:background="@drawable/rounded_textinput"
+        android:drawableEnd="@drawable/scale_24dp_e8eaed_fill0_wght100_grad_25_opsz24"
+        android:hint="Enter your weight ex. 75.2kg"
         android:inputType="numberDecimal"
+        android:maxLength="5"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/heightInput"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"

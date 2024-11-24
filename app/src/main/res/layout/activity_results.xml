@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -9,29 +9,67 @@
     android:layout_height="match_parent"
     tools:context=".results">
 
-    <TextView
-        android:id="@+id/tv_result"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="52sp"
-        android:maxLength="5"
+    <LinearLayout
+        android:id="@+id/vg_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="23.33" />
+        android:background="@drawable/gradient_bg"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="IMC Calculator"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold"></TextView>
+        <TextView
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Find out below your IMC Index"
+            android:textStyle="italic"></TextView>
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:gravity="center"
+            android:maxLength="5"
+            android:textSize="52sp"
+            android:textStyle="bold"
+            tools:text="23.33" />
+
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tv_class_label"
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Your IMC classification is:" />
+        android:layout_height="61dp"
+        android:gravity="center"
+        android:text="Your IMC classification is:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vg_header"
+        app:layout_constraintVertical_bias="0.124"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/tv_classification"
-        android:gravity="center"
-        android:textStyle="bold"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="TextView" />
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:textColor="@color/primary_900"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_class_label"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp"
+        tools:text="Normal" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
