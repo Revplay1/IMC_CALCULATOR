@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="304dp"
+        android:layout_height="128dp"
+        android:src="@drawable/imclogo"
+        app:layout_constraintBottom_toTopOf="@+id/imcButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heightInput"></ImageView>
+
     <LinearLayout
         android:id="@+id/vg_header"
         android:layout_width="match_parent"
