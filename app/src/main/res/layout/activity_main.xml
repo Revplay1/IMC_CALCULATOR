@@ -6,13 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <Button
+        android:id="@+id/imcButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_margin="16dp"
+        android:text="Result"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="16dp"
+        android:hint="Enter your height ex. 1.75 m"
+        android:inputType="numberDecimal"
+        android:id="@+id/heightInput"
+        android:textAlignment="center"
+        android:background="@drawable/rounded_textinput"
+        app:layout_constraintBottom_toTopOf="@+id/imcButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.263" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="16dp"
+        android:textAlignment="center"
+        android:id="@+id/weightInput"
+        android:hint="Enter your weight ex. 75.2kg"
+        android:background="@drawable/rounded_textinput"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/heightInput"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
