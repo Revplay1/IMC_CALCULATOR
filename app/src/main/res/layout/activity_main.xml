@@ -59,7 +59,7 @@
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/heightInput"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="48dp"
         android:layout_margin="16dp"
         android:background="@drawable/rounded_textinput"
         android:drawableEnd="@drawable/height_24dp_e8eaed_fill0_wght100_grad_25_opsz24"
@@ -75,16 +75,16 @@
         app:layout_constraintVertical_bias="0.446" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:drawableEnd="@drawable/scale_24dp_e8eaed_fill0_wght100_grad_25_opsz24"
-        android:layout_height="35dp"
-        android:layout_margin="16dp"
-        android:textAlignment="center"
-        android:maxLength="5"
         android:id="@+id/weightInput"
-        android:hint="Enter your weight ex. 75.2kg"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
         android:background="@drawable/rounded_textinput"
+        android:drawableEnd="@drawable/scale_24dp_e8eaed_fill0_wght100_grad_25_opsz24"
+        android:hint="Enter your weight ex. 75.2kg"
         android:inputType="numberDecimal"
+        android:maxLength="5"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/heightInput"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
