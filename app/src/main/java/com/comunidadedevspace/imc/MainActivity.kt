@@ -21,9 +21,15 @@ class MainActivity : AppCompatActivity() {
         // Button click action
         imcresult.setOnClickListener {
 
+            val weight: Float = itextweight.text.toString().toFloat()
+            val height: Float = itextheight.text.toString().toFloat()
+            val heightQ2 = height + height
+            val result = weight / heightQ2
+
+            println("Your IMC is" + result)
+
+
 
         }
-
-
     }
 }
