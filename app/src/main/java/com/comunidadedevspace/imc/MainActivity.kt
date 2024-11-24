@@ -3,6 +3,7 @@ package com.comunidadedevspace.imc
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
@@ -21,15 +22,30 @@ class MainActivity : AppCompatActivity() {
         // Button click action
         imcresult.setOnClickListener {
 
-            val weight: Float = itextweight.text.toString().toFloat()
-            val height: Float = itextheight.text.toString().toFloat()
-            val heightQ2 = height + height
-            val result = weight / heightQ2
+            val weightStr: String = itextweight.text.toString()
+            val heightStr: String = itextheight.text.toString()
 
-            println("Your IMC is" + result)
+        //if empty
+            if(weightStr == "" || heightStr =="") {
+                //display message
+                Snackbar.make(
+                    itextweight,
+                    "Enter a value!",
+                    Snackbar.LENGTH_LONG
+                )
+                    .show()
+
+            } else {
+                val height = heightStr.toFloat()
+                val weight = weightStr.toFloat()
+
+                val heightQ2 = height + height
+                val result = weight / heightQ2
+
+                println("Your IMC is " + result)
 
 
-
+            }
         }
     }
 }
