@@ -43,11 +43,6 @@ class MainActivity : AppCompatActivity() {
                 val heightQ2 = height + height
                 val result = weight / heightQ2
 
-                //navigate to the next page
-                //create a layout next page
-                //transfer layout to next page
-                //Intent /android class (intention to carry out something)
-
                 val intent = Intent(this, results::class.java)
                 intent.putExtra(key_result_imc, result)
                 startActivity(intent)

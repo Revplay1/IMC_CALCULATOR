@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+// Constant key used for passing the IMC result value between activities
 const val key_result_imc = "ResultIMC"
 
 class results : AppCompatActivity() {
