@@ -12,21 +12,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //values for components inputText
-
         val itextweight = findViewById<TextInputEditText>(R.id.weightInput)
         val itextheight = findViewById<TextInputEditText>(R.id.heightInput)
 
-        // value for result button
         val imcresult = findViewById<Button>(R.id.imcButton)
 
-        // Button click action
         imcresult.setOnClickListener {
 
             val weightStr: String = itextweight.text.toString()
             val heightStr: String = itextheight.text.toString()
 
-        //if empty
             if(weightStr == "" || heightStr =="") {
                 //display message
                 Snackbar.make(
