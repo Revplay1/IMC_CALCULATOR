@@ -1,19 +1,31 @@
 # Calculadora IMC
-Desc
+Calculadora IMC (BMI Calculator) is a simple yet effective app designed to calculate the Body Mass Index (IMC - Índice de Massa Corporal) based on user-provided weight and height. Kotlin Native App
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
-Screenshots
+<img src="https://github.com/user-attachments/assets/971f27c6-3dc9-445f-8b22-85f9ff6d2520" alt="1st Page" width="160">
+    <img src="https://github.com/user-attachments/assets/58beb8bd-c3d1-49e5-858b-bac7da41c5e6" alt="2nd Page" width="160">
+
 
 ## Tecnologias
-Techs
+- Activity
+- Intent
+- Snackbar
+- ViewGroups
+  - LinearLayout
+  - ContraintLayout
+- Views
+    - ImageView
+    - TextView
+    - EditText
+    - Button
 
 
 ## License
 ```
 The MIT License (MIT)
 
-Copyright (c) 2025 Marco Passos
+Copyright (c) 2024 Marco Passos
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
